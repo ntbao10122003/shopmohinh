@@ -1,0 +1,93 @@
+/* Đặt về mặc định các thẻ trong css */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Birthstone&display=swap');
+*{
+    font-family: "Nunito", sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+}
+
+img {
+    max-width: 100%;
+    object-fit: cover;
+}
+@media (max-width: 1000px) {
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .container_fix {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+
+
+@media (min-width: 1270px) {
+    .row {
+        justify-content: space-between;
+        margin: auto;
+    }
+
+    .container {
+        max-width: 1270px;
+    }
+
+    .container_fix {
+        max-width: 900px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container_fix {
+        max-width: 900px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container_fix {
+        max-width: 900px;
+    }
+}
+
+
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+}
+
+a {
+    text-decoration: none !important;
+    color: #000;
+}
+
+ol,
+ul {
+    list-style: none;
+}
