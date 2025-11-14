@@ -25,7 +25,7 @@ export default function Register() {
     try {
       const res = await registerUser(fullname, email, password); // gọi API register
       if (res.code === 200) {
-        navigate("/login");
+        navigate("/");
       } else {
         setError(res.message);
       }

@@ -40,7 +40,7 @@ const Header = () => {
 
           {/* LOGO */}
           <div className="logo wow flipInX" data-wow-delay="0.3s">
-            <Link to="/home">
+            <Link to="/">
               <img src="/images/site49/logo.png" alt="Logo" />
             </Link>
           </div>
@@ -55,7 +55,7 @@ const Header = () => {
 
             <ul className="main-menu accordion">
               <li className="logo-menu">
-                <Link to="/home">
+                <Link to="/">
                   <img src="/images/site49/logo.png" alt="Logo" />
                 </Link>
               </li>

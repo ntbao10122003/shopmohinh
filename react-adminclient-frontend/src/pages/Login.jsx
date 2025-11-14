@@ -11,8 +11,9 @@ const Login = () => {
   const [error, setError] = useState("");
 
   async function handleLogin(e) {
-    navigate("/home"); 
-    {/*e.preventDefault();
+    navigate("/");
+    {
+      /*e.preventDefault();
     setError("");
 
     try {
@@ -24,7 +25,8 @@ const Login = () => {
       navigate("/home"); 
     } catch (err) {
       setError(err.message || "Đăng nhập thất bại!");
-    }*/}
+    }*/
+    }
   }
 
   const styles = {
@@ -87,49 +89,49 @@ const Login = () => {
   return (
     <div style={styles.container}>
       <form style={styles.card} onSubmit={handleLogin}>
-  <h2 style={styles.heading}>Đăng nhập</h2>
-  {error && <p style={styles.error}>{error}</p>}
+        <h2 style={styles.heading}>Đăng nhập</h2>
+        {error && <p style={styles.error}>{error}</p>}
 
-  <input
-    style={styles.input}
-    type="email"
-    placeholder="Email"
-    value={email}
-    onChange={(e) => setEmail(e.target.value)}
-    required
-  />
+        <input
+          style={styles.input}
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
 
-  <input
-    style={styles.input}
-    type="password"
-    placeholder="Mật khẩu"
-    value={password}
-    onChange={(e) => setPassword(e.target.value)}
-    required
-  />
+        <input
+          style={styles.input}
+          type="password"
+          placeholder="Mật khẩu"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+        />
 
-  <button
-    type="submit"
-    style={{
-      ...styles.button,
-      ...(loading ? styles.buttonDisabled : {}),
-    }}
-    disabled={loading}
-  >
-    {loading ? "Đang đăng nhập..." : "Đăng nhập"}
-  </button>
-  <p style={{ textAlign: "center", marginTop: 15 }}>
-    Chưa có tài khoản?{" "}
-    <span
-      style={{ color: "#336BFA", cursor: "pointer", fontWeight: "bold" }}
-      onClick={() => navigate("/register")}
-    >
-      Đăng ký
-    </span>
-  </p>
-</form>
+        <button
+          type="submit"
+          style={{
+            ...styles.button,
+            ...(loading ? styles.buttonDisabled : {}),
+          }}
+          disabled={loading}
+        >
+          {loading ? "Đang đăng nhập..." : "Đăng nhập"}
+        </button>
+        <p style={{ textAlign: "center", marginTop: 15 }}>
+          Chưa có tài khoản?{" "}
+          <span
+            style={{ color: "#336BFA", cursor: "pointer", fontWeight: "bold" }}
+            onClick={() => navigate("/register")}
+          >
+            Đăng ký
+          </span>
+        </p>
+      </form>
     </div>
   );
-}
+};
 
 export default Login;
