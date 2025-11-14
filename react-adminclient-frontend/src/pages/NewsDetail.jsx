@@ -39,7 +39,7 @@ export default function NewsDetail() {
 
   // Format the data to match the existing component structure
   const breadcrumb = [
-    { name: "Trang chủ", href: "/" },
+    { name: "Trang chủ", href: "/home" },
     { name: "Blog", href: "/blog" },
     { name: post.title || "Bài viết", href: "#" },
   ];

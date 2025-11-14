@@ -1,11 +1,11 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { Link } from "react-router-dom"; // ✅ THÊM DÒNG NÀY
+import { Link} from "react-router-dom"; // ✅ THÊM DÒNG NÀY
 import cartIcon from '../assets/images/site49/cart.png';
 
 const SubMenu = ({ children }) => <div className="sub-menu-1">{children}</div>;
 
 const buildHref = (url) => {
-  if (!url) return "/";
+  if (!url) return "/home";
   if (/^https?:\/\//i.test(url)) return url; // external
   return `/${url}`;
 };
@@ -40,7 +40,7 @@ const Header = () => {
 
           {/* LOGO */}
           <div className="logo wow flipInX" data-wow-delay="0.3s">
-            <Link to="/">
+            <Link to="/home">
               <img src="/images/site49/logo.png" alt="Logo" />
             </Link>
           </div>
@@ -55,7 +55,7 @@ const Header = () => {
 
             <ul className="main-menu accordion">
               <li className="logo-menu">
-                <Link to="/">
+                <Link to="/home">
                   <img src="/images/site49/logo.png" alt="Logo" />
                 </Link>
               </li>
@@ -139,6 +139,14 @@ const Header = () => {
 
           {/* CART + USER + SEARCH */}
           <div className="search-user-cart">
+            <div className="mini-search">
+              <Link to="/search">
+                <div className="search-head">
+                  <img src="/images/site49/icon/search.png" alt="Search" />
+                  <div className="search-items"><span>0</span></div>
+                </div>
+              </Link>
+            </div>
             <div className="mini-cart">
               <Link to="/cart">
                 <div className="cart-head">

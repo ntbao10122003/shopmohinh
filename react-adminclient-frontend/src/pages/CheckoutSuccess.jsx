@@ -9,7 +9,7 @@ export default function CheckoutSuccess() {
   // Nếu không có thông tin đơn hàng, chuyển hướng về trang chủ
   useEffect(() => {
     if (!order) {
-      navigate('/');
+      navigate('/home');
     }
   }, [order, navigate]);
 
@@ -95,7 +95,7 @@ export default function CheckoutSuccess() {
         </p>
         <div style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>
           <button 
-            onClick={() => navigate('/')} 
+            onClick={() => navigate('/home')} 
             style={{
               padding: '10px 20px',
               backgroundColor: '#4CAF50',

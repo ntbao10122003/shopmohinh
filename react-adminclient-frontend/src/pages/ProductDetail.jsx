@@ -223,7 +223,7 @@ const addToCart = async ({ productId, quantity }) => {
   }
 
   const breadcrumb = [
-    { name: "Trang chủ", path: "/" },
+    { name: "Trang chủ", path: "/home" },
     { name: "Sản phẩm", path: "/products" },
     {
       name: product.category || "Danh mục",
